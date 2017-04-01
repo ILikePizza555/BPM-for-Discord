@@ -71,12 +71,14 @@ function make_emote(match, parts, name, info) {
     return element;
 }
 
-var discordDisruptiveClasses = ['member-username', 'channel-name', 'user-name', 'username', 'channel-voice-states', 'typing', 'search-bar'];
+var discordDisruptiveClasses = ['member-username', 'channel-name', 'user-name', 'username', 'channel-voice-states', 'typing', 'search-bar', 'channel-members'];
+
 function discordClassInDisruptiveEmotes(node) {
     return discordDisruptiveClasses.filter(function(className) {
         return node.className.indexOf(className) >= 0;
     }).length > 0;
 }
+
 function disableCodeBlocks(node) {
     return node.tagName === 'CODE';
 }
